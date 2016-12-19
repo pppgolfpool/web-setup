@@ -4,7 +4,7 @@
 //@inject(HttpClient)
 export class App {
   constructor() {
-    this.message = "viewmodel message";
+    this.message = "styled message";
   }
 
   // activate(params) {
