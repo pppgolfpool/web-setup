@@ -13,6 +13,8 @@ define('app',["exports"], function (exports) {
 
   var App = exports.App = function App() {
     _classCallCheck(this, App);
+
+    this.message = "viewmodel message";
   };
 });
 define('environment',["exports"], function (exports) {
@@ -74,5 +76,5 @@ define('resources/index',["exports"], function (exports) {
   exports.configure = configure;
   function configure(config) {}
 });
-define('text!app.html', ['module'], function(module) { module.exports = "<template>\r\n  message\r\n  <!--<div class=\"container\">\r\n    <h1>Setup your PPP Pool Account</h1>\r\n    <div class=\"col-xs-5\">\r\n      <p>Please enter a password for your account:</p>\r\n      <form>\r\n        <div class=\"form-group\">\r\n          <label for=\"emailInput\">Sign-up Email:</label>\r\n          <h4><b>${email}</b></h4>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"passwordInput\">Password:</label>\r\n          <input id=\"passwordInput\" class=\"form-control\" type=\"password\" value.bind=\"password\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"confirmInput\">Confirm:</label>\r\n          <input id=\"confirmInput\" class=\"form-control\" type=\"password\" value.bind=\"confirm\">\r\n        </div>\r\n        <button class=\"btn btn-primary\" type=\"button\" click.trigger=\"do()\" disabled.bind=\"!password || !confirm || password !== confirm\">Set Password</button>\r\n        <p if.bind=\"!password || !confirm || password !== confirm\">The entries must match to continue.</p>\r\n      </form>\r\n    </div>\r\n  </div>-->\r\n</template>"; });
+define('text!app.html', ['module'], function(module) { module.exports = "<template>\r\n  ${message}\r\n  <!--<div class=\"container\">\r\n    <h1>Setup your PPP Pool Account</h1>\r\n    <div class=\"col-xs-5\">\r\n      <p>Please enter a password for your account:</p>\r\n      <form>\r\n        <div class=\"form-group\">\r\n          <label for=\"emailInput\">Sign-up Email:</label>\r\n          <h4><b>${email}</b></h4>\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"passwordInput\">Password:</label>\r\n          <input id=\"passwordInput\" class=\"form-control\" type=\"password\" value.bind=\"password\">\r\n        </div>\r\n        <div class=\"form-group\">\r\n          <label for=\"confirmInput\">Confirm:</label>\r\n          <input id=\"confirmInput\" class=\"form-control\" type=\"password\" value.bind=\"confirm\">\r\n        </div>\r\n        <button class=\"btn btn-primary\" type=\"button\" click.trigger=\"do()\" disabled.bind=\"!password || !confirm || password !== confirm\">Set Password</button>\r\n        <p if.bind=\"!password || !confirm || password !== confirm\">The entries must match to continue.</p>\r\n      </form>\r\n    </div>\r\n  </div>-->\r\n</template>"; });
 //# sourceMappingURL=app-bundle.js.map

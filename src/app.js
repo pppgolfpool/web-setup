@@ -3,12 +3,9 @@
 
 //@inject(HttpClient)
 export class App {
-  // constructor(http) {
-  //   this.http = http;
-  //   this.email = '';
-  //   this.password = '';
-  //   this.confirm = '';
-  // }
+  constructor() {
+    this.message = "viewmodel message";
+  }
 
   // activate(params) {
   //   var queryDict = {};
