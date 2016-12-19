@@ -1,0 +1,24 @@
+<template>
+  <div class="container">
+    <h1>Setup your PPP Pool Account</h1>
+    <div class="col-xs-5">
+      <p>Please enter a password for your account:</p>
+      <form>
+        <div class="form-group">
+          <label for="emailInput">Sign-up Email:</label>
+          <h4><b>${email}</b></h4>
+        </div>
+        <div class="form-group">
+          <label for="passwordInput">Password:</label>
+          <input id="passwordInput" class="form-control" type="password" value.bind="password">
+        </div>
+        <div class="form-group">
+          <label for="confirmInput">Confirm:</label>
+          <input id="confirmInput" class="form-control" type="password" value.bind="confirm">
+        </div>
+        <button class="btn btn-primary" type="button" click.trigger="do()" disabled.bind="!password || !confirm || password !== confirm">Set Password</button>
+        <p if.bind="!password || !confirm || password !== confirm">The entries must match to continue.</p>
+      </form>
+    </div>
+  </div>
+</template>
