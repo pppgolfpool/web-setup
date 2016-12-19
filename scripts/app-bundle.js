@@ -91,7 +91,7 @@ define('main',['exports', './environment'], function (exports, _environment) {
   }
 
   Promise.config({
-    longStackTraces: true,
+    longStackTraces: false,
     warnings: {
       wForgottenReturn: false
     }
