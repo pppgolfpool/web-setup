@@ -1,10 +1,9 @@
-define('app',["exports", "aurelia-framework", "aurelia-fetch-client"], function (exports, _aureliaFramework, _aureliaFetchClient) {
+define('app',["exports"], function (exports) {
   "use strict";
 
   Object.defineProperty(exports, "__esModule", {
     value: true
   });
-  exports.App = undefined;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -12,53 +11,11 @@ define('app',["exports", "aurelia-framework", "aurelia-fetch-client"], function 
     }
   }
 
-  var _dec, _class;
+  var App = exports.App = function App() {
+    _classCallCheck(this, App);
 
-  var App = exports.App = (_dec = (0, _aureliaFramework.inject)(_aureliaFetchClient.HttpClient), _dec(_class = function () {
-    function App() {
-      _classCallCheck(this, App);
-
-      this.message = "styled message";
-    }
-
-    App.prototype.activate = function activate(params) {
-      var queryDict = {};
-      if (location.search) {
-        location.search.substr(1).split("&").forEach(function (item) {
-          queryDict[item.split("=")[0]] = item.split("=")[1];
-        });
-        console.log("logging query");
-        console.log(queryDict);
-        this.authUrl = queryDict['authUrl'];
-        this.redirect = queryDict['redirect'];
-        this.email = queryDict['userId'];
-        this.code = queryDict['code'];
-      } else {}
-    };
-
-    App.prototype.do = function _do() {
-      var _this = this;
-
-      if (!this.email || !this.password || !this.confirm) {
-        return;
-      }
-      if (this.password !== this.confirm) {
-        return;
-      }
-
-      this.http.fetch(this.authUrl + "/changepassword?userId=" + this.email + "&changeCode=" + this.code + "&newPassword=" + this.confirm).then(function (response) {
-        return response.json().then(function (data) {
-          window.location.replace(_this.redirect);
-        });
-      }, function (response) {
-        return function (response) {
-          return alert('unauthorized');
-        };
-      });
-    };
-
-    return App;
-  }()) || _class);
+    this.message = "styled message";
+  };
 });
 define('environment',["exports"], function (exports) {
   "use strict";
