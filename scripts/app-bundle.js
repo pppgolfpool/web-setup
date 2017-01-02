@@ -47,7 +47,7 @@ define('app',["exports", "aurelia-framework", "aurelia-fetch-client"], function 
         return;
       }
 
-      this.http.fetch(this.authUrl + "/changepassword?userId=" + this.email + "&changeCode=" + this.code + "&newPassword=" + this.confirm).then(function (response) {
+      this.http.fetch(this.authUrl + "/api/changepassword?userId=" + this.email + "&changeCode=" + this.code + "&newPassword=" + this.confirm).then(function (response) {
         return response.json().then(function (data) {
           window.location.replace(_this.redirect);
         });

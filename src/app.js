@@ -31,7 +31,7 @@ export class App {
       return;
     }
     
-    this.http.fetch(`${this.authUrl}/changepassword?userId=${this.email}&changeCode=${this.code}&newPassword=${this.confirm}`).
+    this.http.fetch(`${this.authUrl}/api/changepassword?userId=${this.email}&changeCode=${this.code}&newPassword=${this.confirm}`).
       then(
       response => response.json().then(data => {
         window.location.replace(this.redirect)
