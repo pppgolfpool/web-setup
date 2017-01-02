@@ -3,7 +3,8 @@ import { HttpClient } from "aurelia-fetch-client";
 
 @inject(HttpClient)
 export class App {
-  constructor() {
+  constructor(http) {
+    this.http = http;
     this.message = "styled message";
   }
 

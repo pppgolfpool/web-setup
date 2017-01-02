@@ -15,9 +15,10 @@ define('app',["exports", "aurelia-framework", "aurelia-fetch-client"], function 
   var _dec, _class;
 
   var App = exports.App = (_dec = (0, _aureliaFramework.inject)(_aureliaFetchClient.HttpClient), _dec(_class = function () {
-    function App() {
+    function App(http) {
       _classCallCheck(this, App);
 
+      this.http = http;
       this.message = "styled message";
     }
 
